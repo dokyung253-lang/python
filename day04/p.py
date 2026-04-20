@@ -50,3 +50,67 @@ for i in range( 1, 51 ) :
         b = i
 
 print("최대가 되는 경우 : {} * {} = {}".format(a, b, max_value))
+
+# 확인문제 p.266
+print("{:b}".format(10)) # 1010
+print( int("1010", 2))   # 10
+
+print("{:o}".format(10)) # 12
+print( int("12", 8))     # 10
+
+print("{:x}".format(10)) # a
+print(int("10", 16))     # 16
+
+print("안녕안녕하세요".count("안")) # 2
+
+# 확인문제 2
+output = [ i for i in range(1, 101) 
+          if "{:b}".format(i).count("0") == 1]
+
+for i in output :
+    print("{} : {}".format(i, "{:b}".format(i)))
+print("합계:", sum(output))
+
+
+# 확인문제 p.290
+def f(x):
+    return x
+print(f(10))
+
+def f(x):
+    return 2 * x + 1
+print(f(10))
+
+def f(x):
+    return (x+1)**2
+print(f(10))
+
+def mul(*values):           # 가변 매개변수는 리스트 타입이다. 
+    result = 1;             # 모두 곱한 결과를 저장하는 변수
+    for value in values :   # 리스트 반복문
+        result *= value     # 하나씩 곱한다.
+    return result           # 함수 종료 시 모두 곱한 결과 리턴/반환
+
+print(mul(5,7,9,10))
+
+# 확인문제1 (p.315)
+앉힐수있는최소사람수 = 2
+앉힐수있는최대사람수 = 10
+전체사람수 = 6 
+memo = {}
+
+def 문제( 남은사람수, 최소사람수 ):         # 100, 2
+    key= str( [남은사람수, 최소사람수])
+    if key in memo :
+        return memo[key]
+    if 남은사람수 < 0 :
+        return 0
+    if 남은사람수 == 0 :
+        return 1
+    
+    count = 0                           # 인원수
+    for i in range( 최소사람수, 앉힐수있는최대사람수 + 1 ) : # 2(최소사람수)부터 11(앉힐수있는최대사람수+1)까지 1씩 증가 반복
+        count += 문제( 남은사람수 -i, i)                   # 남은사람수에 i만큼 제외하고 , i대입
+
+    return count
+print( 문제( 전체사람수, 앉힐수있는최소사람수 )) 
