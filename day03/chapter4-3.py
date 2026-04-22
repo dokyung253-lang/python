@@ -34,7 +34,7 @@ for i in reversed( range(5) ) :   # reversed(리스트), 리스트 역순으로 
 
 #구구단 식
 
-#for 단 in range( 1, 10 ) :
+# for 단 in range( 1, 10 ) :
 #    for 곱 in range( 1, 10 ):
 #        print( 단 * 곱 )
 
@@ -74,6 +74,5 @@ for number in numbers :     # 반복문
     if number < 10 :        # 조건문
         continue            # 반복변수가 10보다 작으면 다음으로 이동
     print( number )
-
     
 
