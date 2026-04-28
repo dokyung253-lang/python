@@ -36,14 +36,13 @@ for i in range(1, 21, 1):
 
 # 문제 6: while문과 break (무한 루프) while True: 무한 루프를 사용하여 숫자를 계속 입력받으시오. 
 # 사용자가 0을 입력하면 "프로그램 종료"를 출력하며 반복을 멈추고, 그 전까지 입력받은 숫자들의 총합을 출력하시오.
-#i = int(input("숫자입력: "))
-#while i != 0:
-#        sum += i
-#        if i == 0 : 
-#            break
-#            print(sum)
-    
-    
+while True:
+    i = int(input("숫자입력: "))
+    if i == 0 :
+        print("프로그램 종료")
+        break
+    print( sum += i )
+
 
 # 문제 7: 중첩 반복문 (구구단) 중첩 for문을 사용하여 구구단 2단부터 9단까지 출력하시오. 각 단의 시작에는 --- [N]단 ---과 같은 구분선을 넣으시오.
 for 단 in range(1, 10, 1):
@@ -72,8 +71,9 @@ for i, value in enumerate(sales):
 # 출력 예시: 210어7125: 65분 주차, 최종 요금: 2500원
 car_numbers = ["210어7125", "142가7415", "888호8888", "931나8234"]
 usage_minutes = [65, 30, 140, 420]
-for thrity in usage_minutes:
-    
+charge = [ i for i in range(30, *, 10) if i in  ] ,
+print(charge)
+
 
 # 문제 10: 간단한 ATM 기기 구현 while True 무한 루프를 사용하여 간단한 ATM 기능을 구현하시오.
 # 요구 조건:
