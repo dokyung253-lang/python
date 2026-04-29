@@ -8,23 +8,22 @@ for i in reversed(a) :
 # 문제 2: 누적 합계 계산 for문과 range()를 사용하여 1부터 100까지 정수 중 5의 배수만 더하여 최종 합계를 출력하시오.
 # (출력 예시: 1부터 100까지 5의 배수의 합: 1050) 
 # 결과 출력 안 됨
-for i in range(1, 101, 5):
+total = 0
+for i in range(1, 101):
     if i %5 == 0:
-        print(sum(i))
+        total += i
+        print(total)
 
 # 문제 3: enumerate 활용 리스트 fruits = ['사과', '바나나', '딸기', '포도']가 있습니다. enumerate()를 사용하여 아래와 같이 출력하시오.
 # (출력 예시: 1번 과일: 사과, 2번 과일: 바나나 ...)
 fruits = ['사과', '바나나', '딸기', '포도']
-for index, value in enumerate(fruits):
-    print(index,"번 과일: ",value )
+for index, value in enumerate(fruits, start=1):
+    print(f"{index}번 과일: {value}" )
 
 # 문제 4: 리스트 내포(List Comprehension) 1부터 10개까지의 숫자 중 홀수만 골라 그 제곱값을 담는 리스트를 리스트 내포 방식을 사용하여 한 줄로 생성하고 출력하시오.
 # (결과 예시: [1, 9, 25, 49, 81])
-i = 1
-while i< 11:
-    print( i**2 )
-    i+=2
-print()
+squares = [x**2 for x in range( 1, 11 ) if x % 2 == 1]
+print(squares)
 
 # 문제 5: continue를 사용한 필터링 1부터 20까지의 숫자 중 2의 배수와 3의 배수를 모두 제외한 숫자만 출력하시오. 
 # 요구 조건: if문과 continue 문을 반드시 사용하시오.
@@ -36,18 +35,20 @@ for i in range(1, 21, 1):
 
 # 문제 6: while문과 break (무한 루프) while True: 무한 루프를 사용하여 숫자를 계속 입력받으시오. 
 # 사용자가 0을 입력하면 "프로그램 종료"를 출력하며 반복을 멈추고, 그 전까지 입력받은 숫자들의 총합을 출력하시오.
+total = 0 
 while True:
     i = int(input("숫자입력: "))
     if i == 0 :
         print("프로그램 종료")
+        print("총합: ", total)
         break
-    print( sum += i )
+    total += i
 
 
 # 문제 7: 중첩 반복문 (구구단) 중첩 for문을 사용하여 구구단 2단부터 9단까지 출력하시오. 각 단의 시작에는 --- [N]단 ---과 같은 구분선을 넣으시오.
-for 단 in range(1, 10, 1):
+for 단 in range(2, 10):
     print("-----------[{}]단------------".format(단))
-    for 곱 in range(1, 10, 1):
+    for 곱 in range(1, 10):
         print(단,"*",곱,"=", 단*곱)
 
 
@@ -71,8 +72,9 @@ for i, value in enumerate(sales):
 # 출력 예시: 210어7125: 65분 주차, 최종 요금: 2500원
 car_numbers = ["210어7125", "142가7415", "888호8888", "931나8234"]
 usage_minutes = [65, 30, 140, 420]
-charge = [ i for i in range(30, *, 10) if i in  ] ,
-print(charge)
+
+for i in range(len(car_numbers)):
+    
 
 
 # 문제 10: 간단한 ATM 기기 구현 while True 무한 루프를 사용하여 간단한 ATM 기능을 구현하시오.
