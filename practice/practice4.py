@@ -73,7 +73,6 @@ for i, value in enumerate(sales):
 car_numbers = ["210어7125", "142가7415", "888호8888", "931나8234"]
 usage_minutes = [65, 30, 140, 420]
 
-for i in range(len(car_numbers)):
     
 
 
