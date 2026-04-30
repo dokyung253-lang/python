@@ -90,3 +90,4 @@ print( x.describe() )
 print( x['나이'].sum() )     
 print( x['score'].mean())
 print( x['passed'].value_counts() ) # 특정 열의 빈도 확인
+
