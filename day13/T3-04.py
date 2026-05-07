@@ -2,7 +2,7 @@
 # 맷플롯립 : 원초적인 차트(기본)
 # 씨본 : 맷플롯립보다 세부적인 기능 지원(상관관계 o, 통계나 예측 결과 예상 시에 자주 사용됨 ) 
 
-# [1] 맷플로립 설치 : pip install matplotlib
+# [1] 맷플롯립 설치 : pip install matplotlib
 import matplotlib as mpl
 # print( mpl.__version__) # 3.10.9
 
@@ -66,7 +66,7 @@ plt.pie( sizes, labels = labels, colors = colors, explode = explode, startangle=
 # plt.title('음식 선호도')
 # plt.show()
 
-# [5] 선점도 , 밀집도 , .scatter( x축값, y축값 , c(color) = , s(size) = 점크기)
+# [5] 산점도 , 밀집도 , .scatter( x축값, y축값 , c(color) = , s(size) = 점크기)
 x = [1.5 , 2.5, 3.5, 4.5, 5.5]
 y = [50, 60, 65, 70, 75]
 # plt.scatter(x,y, c = 'red', s = 25)
