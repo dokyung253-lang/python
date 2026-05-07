@@ -17,7 +17,6 @@ plt.title('리스크 대비 수익률')
 plt.show()
 
 # [3] 산점도 : 자산별 리스크 대비 수익률
-# 중복에는 group 사용
 
 categories = df['자산'].unique()      # 중복제거된 자산 리스트
 # print( categories )  # ['자산 A', '자산 B', '자산 C', '자산 D', '자산 E']
