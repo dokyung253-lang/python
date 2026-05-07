@@ -65,7 +65,8 @@ plt.show()
 
 # 5-4 (객실 등급): sns.countplot을 사용하여 객실 등급(Pclass)에 따른 생존 여부(Survived)별 인원수를 시각화한다.
 print( df['Pclass'][0] )
-sns.countplot(data=df, x = 'Pclass' )
+sns.countplot(data=df, x = 'Pclass')
+plt.title('객실 등급')
 
 # 5-5 (승선 항구): sns.countplot을 사용하여 승선 항구(Embarked)에 따른 생존 여부(Survived)별 인원수를 시각화한다.
 print( df['Embarked'][0] )          # C = Cherbourg, Q = Queenstown , S = Southampton
