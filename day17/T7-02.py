@@ -27,7 +27,7 @@ for page in range( 1, 4 ) : #range( 시작, 끝 전까지 ) # 1~3
         yes_b = book.select_one('.yes_b').get_text().strip()
         info_auth = book.select_one('.info_auth').get_text().strip().replace('\n', '')
         # (6) 리스트에 딕셔너리 포함하기
-        book_list.append( {"제목": gd_name, "가격": yes_b, "저자정보" : 'info_auth'} )
+        book_list.append( {"제목": gd_name, "가격": yes_b, "저자정보" : info_auth} )
     # (7) import time, time.sleep(초) , 지정한 초 만큼 코드(스레드) 대기, 여러개 크롤링 시 과부하 방지 
     time.sleep(2)
 

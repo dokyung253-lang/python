@@ -12,7 +12,7 @@ df_customer = pd.DataFrame( data_json['customer_data'] )
 print( df_customer.head() ) # head는 5개 불러옴
 
 # [2] 데이터 분석 / 시각화 
-# (1) 성별과 연령대로 그룹화, df.groupbt{ ['그룹기준', '그룹기준 ] }
+# (1) 성별과 연령대로 그룹화, df.groupby{ ['그룹기준', '그룹기준 ] }
 # (2) 다수통계 df.agg( {'열이름' : '함수명' } )
 newDf = df_customer.groupby(['성별', '연령대']).agg({'고객 수' : 'sum', '평균 구매 금액' : 'mean' } ).reset_index()
 print( newDf )                      # 성별 + 연령대 별 총고객수(합계) 와 평균 구매금액의 평균

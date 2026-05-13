@@ -12,7 +12,7 @@ df = pd.DataFrame( data_json['financial_performance_data'])
 # 플롯박스 : plt.boxplot() : 데이터 최솟값(맨 아래), 최댓값(맨 위), 1사분위(박스 아래), 중앙값(선), 3사분위(박스 위) 시각화
 plt.boxplot( [df['수익'], df['비용'], df['이익'] ], tick_labels= ['수익','비용', '이익'] )
 plt.ylabel('금액')
-plt.title('항목별 금액 분포')
+plt.title('항목별 금ㄹ액 분포')
 plt.show()
 
 # 차트확인 : 비용 데이터에서 800 부근에 이상치(점)가 존재한다.
